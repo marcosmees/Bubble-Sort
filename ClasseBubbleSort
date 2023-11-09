@@ -1,0 +1,30 @@
+public class BubbleSort {
+    //complexidade de O(n²), dificilmente usado, ruim porém fácil de entender.
+
+    public int[] bubbleSort(int[] a){
+                
+        int aux;
+        
+        for(int i = 0; i < (a.length - 1); i++){
+            for(int j = 1; j < a.length; j++){           
+                if(a[i] > a[j]){
+                    aux = a[i];
+                    a[i] = a[j];
+                    a[j] = aux;               
+                }
+            }
+        }     
+        return a;
+    }
+        
+    public int swap(int x, int y){
+         int aux;
+         
+         aux = x;
+         x = y;
+         y = aux;         
+
+         return (x & y);
+
+    }
+}
